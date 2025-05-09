@@ -1,0 +1,1557 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA/"
+     xml:base="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dpv="http://www.w3.org/ns/dpv#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:dpv1="https://w3.org/ns/dpv#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl1="https://w3id.org/dpv/owl#"
+     xmlns:prof="http://www.w3.org/ns/dx/prof/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:scoro="http://purl.org/spar/scoro/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:C-FORPIA="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#"
+     xmlns:GDPIA-ReasoningExample="http://www.semanticweb.org/ranasaniei/ontologies/2021/8/GDPIA-ReasoningExample#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIAv1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/dpv/2.1/legal/eu/gdpr/owl#"/>
+        <owl:imports rdf:resource="https://w3id.org/dpv/2.1/risk/owl#"/>
+        <rdfs:comment>C-FORPIA is a unified ontology that brings together concepts from Data Protection Impact Assessment (GDPR), Cyber Threat Intelligence (CTI) and Digital Forensics Response (DFR)</rdfs:comment>
+        <rdfs:label>C-FORPIA Ontology</rdfs:label>
+        <schema:version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</schema:version>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ranasaniei/ontologies/2021/8/GDPIA-ReasoningExample#hasStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ranasaniei/ontologies/2021/8/GDPIA-ReasoningExample#hasStatus"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#actsAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#actsAs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#addressedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#addressedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#addresses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#addresses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#addresses">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#affectedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#affects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#affects">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#aimsToUphold -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#aimsToUphold">
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#assesses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#assesses">
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#belongTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#belongTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasOwnershipOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#DataSubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#containedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#containedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#contains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#containsPersonalData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#containsPersonalData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#describedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#describedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#detectsRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#detectsRisk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#determinesNeedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#determinesNeedFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documentedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documentedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documents">
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ensures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ensures">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#exploitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#exploitedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#usesTechnique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#generatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#generatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#generatesEvidenceFrom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#generatesEvidenceFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#generatesEvidenceFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasDecision -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasDecision"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasHighRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasHighRisk">
+        <rdfs:subPropertyOf rdf:resource="https://w3.org/ns/dpv#hasRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasLowRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasLowRisk">
+        <rdfs:subPropertyOf rdf:resource="https://w3.org/ns/dpv#hasRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasOwnershipOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasOwnershipOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasResidualRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasResidualRisk">
+        <rdfs:subPropertyOf rdf:resource="https://w3.org/ns/dpv#hasRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#implementedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#implementedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#implements">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicatedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicatesVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#indicatesVulnerability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#informs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#informs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#involvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#involvedIn">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#involves">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#isVersionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#isVersionOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mandates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mandates">
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigates">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#monitoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#monitoredBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#monitors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#monitors">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#posedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#posedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#poses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#poses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#processedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#processedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#processesData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#processesData">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesToActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesToActor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesToVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#relatesToVulnerability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#requiredFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#requiredFor">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#requiresLegalBasis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#requiresLegalBasis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#LegalBasis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#supports -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#supports">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#targets -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#targets">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#threatens -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#threatens">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#usesTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#usesTechnique">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3.org/ns/dpv#hasRisk -->
+
+    <owl:ObjectProperty rdf:about="https://w3.org/ns/dpv#hasRisk">
+        <rdfs:range rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3.org/ns/dpv#hasTechnicalOrganisationalMeasure -->
+
+    <owl:ObjectProperty rdf:about="https://w3.org/ns/dpv#hasTechnicalOrganisationalMeasure">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Consultation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence">
+        <rdfs:comment xml:lang="en">Information about current/potential cyber threats, actors, Indicators of Compromise (IOC), Tactics, Techniques and Procedures (TTPs) used for proactive defence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#RiskMitigationMeasure"/>
+        <rdfs:comment xml:lang="en">Proactive forensic readiness activities to ensure that relevant processes and tools are in place and that personnel involved in the DF investigation process are adequately trained and equipped with the skills and knowledge to handle cybersecurity incidents, while minimising cost and time, disruption to business processes and maintaining or improving current levels of information security.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple">
+        <rdfs:comment>A fundamental normative concept that underpins the lawful and ethical processing of personal data, as established by data protection frameworks such as the GDPR. Each principle articulates a core requirement that must be upheld throughout the data lifecycle, guiding data controllers and processors in their compliance responsibilities.</rdfs:comment>
+        <skos:definition>A fundamental normative concept that underpins the lawful and ethical processing of personal data, as established by data protection frameworks such as the GDPR. Each principle articulates a core requirement that must be upheld throughout the data lifecycle, guiding data controllers and processors in their compliance responsibilities.</skos:definition>
+        <skos:prefLabel>Data Protection Principle</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource">
+        <rdfs:comment xml:lang="en">Origin of potential digital evidence such as logs, network traffic, system images and (non)-volatile storage devices</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact">
+        <rdfs:comment xml:lang="en">Specific piece of digital evidence such as recovered files, deleted files, file metadata, windows event logs and shell history</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#hasHighRisk"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/dpv/risk/owl#HighRisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IntegratedDPIA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IntegratedDPIA">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/dpv/owl#DPIA"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documents"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documents"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#documents"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigates"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Legal_Measure"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#mitigates"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Technical_Measure"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <rdfs:comment>The IntegratedDPIA class is used to document the integration of:
+- CTI to analyse the attacker profile and threat indicators.
+- DFR  to collect and analyse logs, disk images, and email artifacts.
+- Data Protection assessment to evaluate the risks to data subjects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Legal_Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Legal_Measure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure"/>
+        <skos:prefLabel>Legal Measure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Organisational_Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Organisational_Measure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure"/>
+        <skos:prefLabel>Organisational Measure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Physical_Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Physical_Measure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure"/>
+        <skos:prefLabel>Physical  Measure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP">
+        <rdfs:comment xml:lang="en">Describe the behaviour of threat actors during cyber-attacks where tactics represent their high-level goals, techniques explain how they achieve these goals and procedures detail the specific steps and tools used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Technical_Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Technical_Measure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure"/>
+        <skos:prefLabel>Technical Measure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor">
+        <rdfs:comment xml:lang="en">Individual or group posing a cyber threat. These can be Activists, Crime-Syndicate, Spy and National-State</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability">
+        <rdfs:comment xml:lang="en">A weakness or flaw in an asset or control that can be exploited by a threat. It is possible that such weakness, if left untreated, could be publicly disclosed security flaws or vulnerabilities in software or hardware (CVE) or a categorised list of common software weaknesses with the potential to result in vulnerabilities (CWE).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#DataSubject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#DataSubject">
+        <rdfs:comment xml:lang="en">The individual whose personal data is being processed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ranasaniei/ontologies/2021/6/untitled-ontology-69#PersonalData">
+        <rdfs:comment xml:lang="en">Information relating to an identified or identifiable natural person including special categories such as special categories of sensitive data (e.g., racial/ethnic origin, sexual orientation, biometric/genetic data, etc.) and data relating to criminal convictions &amp; offenses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#Consultation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#Consultation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#LegalCompliance -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#LegalCompliance">
+        <rdfs:comment xml:lang="en">Specific obligation from laws or standards such as the different Articles in the GDPR itself and ISO/IEC 27001:2022 (standard for stablishing, implementing, maintaining, and continually improving an Information Security Management System) and ISO/IEC 27043:2015 (standard for incident investigation processes across various incident investigation scenarios involving digital evidence)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#ProcessingActivity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#ProcessingActivity">
+        <rdfs:comment xml:lang="en">Operation(s) performed on personal data such as data collection, storage, usage, transfer, destruction and disclosure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#RiskMitigationMeasure -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#RiskMitigationMeasure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure"/>
+        <rdfs:comment xml:lang="en">Technical and organisational risk mitigation measures include the implementation of security controls, internal policies and a DFR. A DFR process improves incident detection and evidence preservation, supports timely investigation and breach reporting, and ensures the integrity and admissibility of digital evidence for compliance and legal purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Asset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Asset">
+        <rdfs:comment xml:lang="en">Application, network, data repository, device involved in processing or targeted by threats.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANecessityAssessment -->
+
+    <rdf:Description rdf:about="https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANecessityAssessment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/dpv/owl#DPIA"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#determinesNeedFor"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dpv/owl#DPIA -->
+
+    <rdf:Description rdf:about="https://w3id.org/dpv/owl#DPIA">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#assesses"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A compliance framework that combines a comprehensive methodology with appropriate tools (such as templates) and stakeholder involvement to assess and document the privacy risks of a processing activity. Depending on the outcome, certain corrective actions are required to mitigate the risks detected in the data processing. 
+
+We declared it as defined class to ensure that every DPIA instance is associated with at least one processing activity, thus enabling completeness checks.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure -->
+
+    <owl:Class rdf:about="https://w3id.org/dpv/owl#TechnicalOrganisationalMeasure">
+        <rdfs:comment>Technical and Organisational measuresto ensure good practices in terms of usage of data and technologies</rdfs:comment>
+        <skos:prefLabel>Technical and Organisational Measure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#AI_Act -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#AI_Act">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#APT29_Report -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#APT29_Report">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#APTActor_WizardSpider_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#APTActor_WizardSpider_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Activists -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Activists">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+        <C-FORPIA:threatens rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PolitcalMembership"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Activity1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Activity1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Application -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Application">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Audio_Recordings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Audio_Recordings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Audit_Trail_Generation_and_Preservation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Audit_Trail_Generation_and_Preservation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <skos:prefLabel>Audit Trail Generation and Preservation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTIReport_WizardSpider_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTIReport_WizardSpider_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+        <C-FORPIA:relatesToActor rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#APTActor_WizardSpider_HSE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTI_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTI_TestCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CVE-2017-0144 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CVE-2017-0144">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CVE-2023-23397 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CVE-2023-23397">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-119 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-119">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-639 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-639">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-89 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CWE-89">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Vulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CommandAndControlOverHTTPS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CommandAndControlOverHTTPS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CredentialDumping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CredentialDumping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Crime-Syndicate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Crime-Syndicate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+        <C-FORPIA:threatens rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DNAHeritanceTest"/>
+        <rdfs:label>Crime Syndicate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRInvestigation_Ransomware_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRInvestigation_Ransomware_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFR_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFR_TestCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DLLInjection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DLLInjection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DNAHeritanceTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DNAHeritanceTest">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:label>DNA Heritance Test</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIAForWebsite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIAForWebsite">
+        <rdf:type rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <dpv1:hasRisk rdf:resource="https://w3id.org/dpv/risk/owl#DataBreach"/>
+        <dpv1:hasRisk rdf:resource="https://w3id.org/dpv/risk/owl#UnauthorisedDataAccess"/>
+        <rdfs:Label>DPIA for Website</rdfs:Label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIA_Ransomware2021_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIA_Ransomware2021_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IntegratedDPIA"/>
+        <C-FORPIA:contains rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_EncryptedFiles_HSE"/>
+        <C-FORPIA:contains rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_Logs_HSE"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTIReport_WizardSpider_HSE"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIA_Ransomware2021_HSE"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_Exposure_PatientData_HSE"/>
+        <C-FORPIA:mitigates rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMeasure_BreachNotice_HSE"/>
+        <C-FORPIA:mitigates rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMeasure_NetworkIsolation_HSE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIA_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DPIA_TestCase">
+        <rdf:type rdf:resource="https://w3id.org/dpv/owl#DPIA"/>
+        <C-FORPIA:contains rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArt_TestCase"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CTI_TestCase"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFR_TestCase"/>
+        <C-FORPIA:documents rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_TestCase"/>
+        <C-FORPIA:mitigates rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMitigation_TestCase"/>
+        <C-FORPIA:mitigates rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMitigation_TestCase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataStagedForExfiltration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataStagedForExfiltration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data_Governance_Act -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data_Governance_Act"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data_Repository -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Data_Repository">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Deployment_of_Centralised_Log_Management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Deployment_of_Centralised_Log_Management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <skos:prefLabel>Deployment of Centralised Log Management</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DisableSecuritySoftware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DisableSecuritySoftware">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#EmailProcessing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#EmailProcessing">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Email_Headers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Email_Headers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Fairness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Fairness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Firewall_Logs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Firewall_Logs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArt_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArt_TestCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_EncryptedFiles_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_EncryptedFiles_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_Logs_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact_Logs_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#GDPR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#GDPR">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Generic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Generic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Hardware_Device -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Hardware_Device">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IDS_Logs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IDS_Logs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IOC_Feb2025_ExchangeExploit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IOC_Feb2025_ExchangeExploit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Indicators_RansomwareCampaign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Indicators_RansomwareCampaign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LateralMovementUsingPsExec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LateralMovementUsingPsExec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Lawfulness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Lawfulness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMeasure_BreachNotice_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMeasure_BreachNotice_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Legal_Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMitigation_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LegalMitigation_TestCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Legal_Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LivingOffTheLandBinaries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#LivingOffTheLandBinaries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Minimisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Minimisation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#National-State -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#National-State">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Network -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Network">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PersistenceViaRegistryRunKeys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PersistenceViaRegistryRunKeys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PolitcalMembership -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PolitcalMembership">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#ProcessingActivity"/>
+        <rdfs:label>Political Club Membership</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PurposeLimitation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#PurposeLimitation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_Exposure_PatientData_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_Exposure_PatientData_HSE">
+        <rdf:type rdf:resource="https://w3id.org/dpv/owl#RiskConcept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Risk_TestCase">
+        <rdf:type rdf:resource="https://w3id.org/dpv/risk/owl#LegalRiskConcept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ScheduledTaskForPersistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ScheduledTaskForPersistence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#SpearPhishingAttachment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#SpearPhishingAttachment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Spy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Spy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ThreatActor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTPs_LivingOffTheLand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TTPs_LivingOffTheLand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#CyberThreatIntelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMeasure_NetworkIsolation_HSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMeasure_NetworkIsolation_HSE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Technical_Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMitigation_TestCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#TechMitigation_TestCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Technical_Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Transparency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Transparency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DataProtectionPrinciple"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#User_Access_Logs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#User_Access_Logs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#biometric_data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#biometric_data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData"/>
+        <rdfs:label>Biometric Data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#deleted_files -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#deleted_files">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#genetic_data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#genetic_data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData"/>
+        <rdfs:comment>Genetic health record of patient X</rdfs:comment>
+        <rdfs:label>Genetic Data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#health-related -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#health-related">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData"/>
+        <rdfs:label>Health Related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#logs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#logs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#misuse_of_personal_data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#misuse_of_personal_data">
+        <skos:prefLabel>misuse of personal data</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#network_traffic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#network_traffic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#political_opinions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#political_opinions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#HighRiskPersonalData"/>
+        <rdfs:label>Political Opinions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#recovered_files -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#recovered_files">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#religious_or_philosophical_beliefs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#religious_or_philosophical_beliefs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#sexual_orientation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#sexual_orientation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#shell_history -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#shell_history">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#storage_devices -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#storage_devices">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#system_images -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#system_images">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DigitalEvidenceSource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#trade_union_membership -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#trade_union_membership"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#unauthorized_access -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#unauthorized_access">
+        <skos:prefLabel>Unauthorized Access</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#userConsent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#userConsent">
+        <skos:prefLabel>User Consent</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#violations_of_privacy_policies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#violations_of_privacy_policies">
+        <skos:prefLabel>Violations of Privacy Policies</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#windows_event_logs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#windows_event_logs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ForensicArtifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Creating_Standard_Operating_Procedures_(SOPs)_for_evidence_handling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#Creating_Standard_Operating_Procedures_(SOPs)_for_evidence_handling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#DFRProcess"/>
+        <skos:prefLabel>Creating Standard Operating Procedures (SOPs) for evidence handling</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ISO/IEC_27001:2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ISO/IEC_27001:2022">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ISO/IEC_27043:2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#ISO/IEC_27043:2015">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dpv#LegalCompliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ggeorgiadis/ontologies/2025/C-FORPIA#IntegratedDPIA"/>
+            <rdf:Description rdf:about="https://w3id.org/dpv/legal/eu/gdpr/owl#DPIANecessityAssessment"/>
+            <rdf:Description rdf:about="https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAOutcome"/>
+            <rdf:Description rdf:about="https://w3id.org/dpv/legal/eu/gdpr/owl#DPIAProcedure"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
