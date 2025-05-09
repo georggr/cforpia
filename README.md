@@ -23,7 +23,7 @@ The C-FORPIA ontology was created using the **Web Ontology Language (OWL)** and 
 The repository contains:
 
 - `cforpia.rdf`: The main OWL ontology file
-- `ontology-diagram.png`: a visual overview
+- `C-FORPIA-ontology-diagram.png`: a visual overview
 - `examples/`: Example of its use in real-world scenarions (to be provided) 
 
 ## How to Use
