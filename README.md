@@ -47,7 +47,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 For questions or collaboration opportunities, please contact:
 
-**Georgios Georgiadis**  
+**Georgios Georgiadis, PhD**  
 Email: [georgios.georgiadis@ugent.be](mailto:georgios.georgiadis@ugent.be)
 
 ---
