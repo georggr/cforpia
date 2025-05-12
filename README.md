@@ -22,13 +22,13 @@ The C-FORPIA ontology was created using the **Web Ontology Language (OWL)** and 
 
 The repository contains:
 
-- `cforpia_v1.0.rdf`: The main OWL ontology file
+- `cforpia_v1.5.rdf`: The main OWL ontology file
 - `C-FORPIA-ontology-diagram.png`: a visual overview
 - `examples/`: Example of its use in real-world scenarions (to be provided) 
 
 ## How to Use
 
-1. Open `cforpia_v1.0.rdf` using [Protégé](https://protege.stanford.edu/).
+1. Open `cforpia.rdf` using [Protégé](https://protege.stanford.edu/).
 2. Use the HermiT or Pellet reasoner to explore inferred relationships.
 3. Query the ontology using SPARQL to extract insights across CTI, DFR, and DPIA.
 4. Extend the ontology as needed to incorporate domain-specific taxonomies or multilingual terms.
