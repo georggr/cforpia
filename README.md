@@ -13,7 +13,7 @@ The C-FORPIA ontology was created using the **Web Ontology Language (OWL)** and 
 
 C-FORPIA also incorporates vocabularies/taxonomies such such as the DPV: Legal and DPV: Risk from the excellent job of Data Privacy **Vocabularies and Controls Community Group (DPVCG)**
 
-links: [Community Group](https://www.w3.org/community/dpvcg/) | [GitHub]([https://github.com/w3c/dpv/wiki/](https://github.com/w3c/dpv)]
+links: [Community Group](https://www.w3.org/community/dpvcg/) | [GitHub](https://github.com/w3c/dpv/wiki/](https://github.com/w3c/dpv)]
 
 ## Features
 
