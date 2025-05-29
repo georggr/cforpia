@@ -11,7 +11,7 @@ This ontology was developed as part of a Master’s thesis at the **University o
 
 The C-FORPIA ontology was created using the **Web Ontology Language (OWL)** and implemented with the **Protégé** ontology editor. It follows the **Design Science Research (DSR)** methodology to ensure both theoretical rigour and practical relevance.
 
-C-FORPIA also incorporates vocabularies/taxonomies such such as the DPV: Legal and DPV: Risk from the excellent job of Data Privacy **Vocabularies and Controls Community Group (DPVCG)**
+C-FORPIA also incorporates vocabularies/taxonomies such as the DPV: Legal and DPV: Risk,which are the result of the excellent work of the **Data Privacy Vocabularies and Controls Community Group (DPVCG)**
 
 links: [Community Group](https://www.w3.org/community/dpvcg/) | [GitHub](https://github.com/w3c/dpv/)
 
