@@ -1,4 +1,7 @@
 
+![C-FORPIA Ontology - visual selection](https://github.com/user-attachments/assets/f3520192-0e89-425b-9d9f-090d8d325fac)
+
+
 **C-FORPIA** stands for **Cyber-FORensics Privacy Impact Assessment**. It is a unified ontological framework designed to semantically integrate three critical domains:
 - **Cyber Threat Intelligence (CTI)**
 - **Digital Forensics Readiness (DFR)**
