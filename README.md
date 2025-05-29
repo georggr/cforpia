@@ -1,5 +1,7 @@
 
-![C-FORPIA Ontology - visual selection](https://github.com/user-attachments/assets/f3520192-0e89-425b-9d9f-090d8d325fac)
+<p align="center">
+![C-FORPIA Ontology - visual selection (1)](https://github.com/user-attachments/assets/6194cac3-c08f-42b7-9ee7-560d945f8f42)
+</p>
 
 
 **C-FORPIA** stands for **Cyber-FORensics Privacy Impact Assessment**. It is a unified ontological framework designed to semantically integrate three critical domains:
